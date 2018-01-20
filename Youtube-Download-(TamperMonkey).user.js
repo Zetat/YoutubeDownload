@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Youtube Download
-// @version      3.5
+// @version      3.7
 // @description  Baixar áudio e vídeo do youtube
 // @author       Zeta Tec
 // @homepageURL https://www.youtube.com/c/zetatec
@@ -10,8 +10,8 @@
 // @exclude         *://www.youtube.com/live_chat*
 // @icon            http://zetatec27.blogspot.com.br/favicon.ico
 // @encoding utf-8
-// @updateURL https://raw.githubusercontent.com/Zetat/YoutubeDownload/master/Youtube-Download-(TamperMonkey).user.js
-// @downloadURL https://raw.githubusercontent.com/Zetat/YoutubeDownload/master/Youtube-Download-(TamperMonkey).user.js
+// @updateURL https://raw.githubusercontent.com/Zetat/random/master/Youtube-Download-(TamperMonkey).user.js
+// @downloadURL https://raw.githubusercontent.com/Zetat/random/master/Youtube-Download-(TamperMonkey).user.js
 // @require      http://code.jquery.com/jquery-1.11.0.min.js
 // @grant        GM_xmlhttpRequest
 // @connect			googlevideo.com
@@ -167,7 +167,7 @@ $.fn.extend({
 // things related to the interface can be found here
 
 // The text colour of the size once loaded
-var SIZE_LOADED  = "red";
+var SIZE_LOADED  = "#151D5A";
 var SIZE_WAITING = "green";
 
 // Sprites:
@@ -283,6 +283,7 @@ Display.prototype = {
 
 				$li.find("span.size").html(sizes.formatSize(size));
 				$li.find("span.size").css("color", SIZE_LOADED);
+				
 			} else {
 				// Try again in 2 seconds
 				setTimeout(function() {
@@ -1225,7 +1226,7 @@ AjaxClass.prototype = {
 		"#downloadBtn": {
 			"padding":"0 8px 0 5.5px",
 			"height":"24px",
-			"background-color":"green",
+			"background-color":"#167ac6",
 			"color":"white",
 			"font-weight":"normal",
 			"box-shadow":"0 1px 0 rgba(0,0,0,0.05)",
@@ -1244,7 +1245,7 @@ AjaxClass.prototype = {
 			"background-color":"gray!important"
 		},
 		"#downloadBtn:hover": {
-			"background-color":"darkgreen"
+			"background-color":"darkblue"
 		},
 		"#downloadBtn span": {
 			"font-size":"12px"
